@@ -2,6 +2,7 @@ module Cell
   class Concept < Cell::ViewModel
     abstract!
     self.view_paths = ["app/concepts"]
+    self.assets_paths = ["views"]
 
     # TODO: this should be in Helper or something. this should be the only entry point from controller/view.
     class << self

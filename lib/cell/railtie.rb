@@ -14,8 +14,8 @@ module Cell
     # ruthlessly stolen from the zurb-foundation gem.
     initializer 'cells.update_asset_paths' do |app|
       Array(app.config.cells.with_assets).each do |cell_class|
-        # puts "@@@@@ #{cell_class.camelize.constantize.prefixes}"
-        app.config.assets.paths += cell_class.camelize.constantize.prefixes # Song::Cell.prefixes
+        # puts "@@@@@ #{cell_class.camelize.constantize.assets_prefixes}"
+        app.config.assets.paths += cell_class.camelize.constantize.assets_prefixes # Song::Cell.assets_prefixes
       end
     end
 

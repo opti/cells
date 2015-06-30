@@ -15,6 +15,9 @@ module Cell
     inheritable_attr :view_paths
     self.view_paths = ["app/cells"]
 
+    inheritable_attr :assets_paths
+    self.assets_paths = []
+
     class << self
       def templates
         @templates ||= Templates.new # note: this is shared in subclasses. do we really want this?
